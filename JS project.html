@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Projects</title>
+    <link rel="stylesheet" href="CSS For Portfolio.css">
+    <header>
+        <div id="logo">
+         ✨Bhargavi.P✨       </div>
+       <nav>
+           <a href="C:\Users\bharg\.vscode\skoolofcode\Portfolio\Code\JS1\Portfolio\Home.html"> Home </a>
+           <a href="C:\Users\bharg\.vscode\skoolofcode\Portfolio\Code\JS1\Portfolio\About Myself.html"> About Myself </a>
+           <a href="C:\Users\bharg\.vscode\skoolofcode\Portfolio\Code\JS1\Portfolio\Hobbies.html"> Hobbies </a>
+           <a href="C:\Users\bharg\.vscode\skoolofcode\Portfolio\Code\JS1\Portfolio\Acheivments.html"> Acheivments </a>
+           <a href="C:\Users\bharg\.vscode\skoolofcode\Portfolio\Code\JS1\Portfolio\Travel Diaries.html"> Travel Diaries </a>
+           <a href="C:\Users\bharg\.vscode\skoolofcode\Portfolio\Code\JS1\Portfolio\Form.html"> Feedback </a>
+           <a href="C:\Users\bharg\.vscode\skoolofcode\Portfolio\Code\JS1\Portfolio\JS project.html">JS Projects</a>
+       </nav>
+    </header>
+    
+</head>
+<body class="row" id="color1" onload="rclock()" style="text-align: center;">
+
+    <div class="row">
+        <script>
+            function change(){
+                var b=document.getElementById("b1").value;
+                alert(b)
+                if (b=="sangita"){
+                   
+                    document.getElementById("b1").value ="manya";
+                    document.getElementById("b1").innerHTML="Manya"; 
+                    document.getElementById("quote").innerHTML="Hello";
+                }
+            else if(b=="manya"){
+            document.getElementById("b1").value="bhargavi";
+            document.getElementById("b1").innerHTML="Bhargavi";
+            document.getElementById("quote").innerHTML="Hola";
+        }
+        else if(b=="bhargavi"){
+    
+    
+            document.getElementById("b1").value="sangita";
+            document.getElementById("b1").innerHTML="Sangita";
+            document.getElementById("quote").innerHTML="Good Morning";
+            }
+            }
+        </script>
+        
+            <h2 style="color: cornflowerblue;">Click on the button to change the text!</h2>
+            <button id="b1" value="manya" onclick="change()">manya</button>
+            <p id="quote">Hello</p>
+        
+    <div class="project">
+    </div>
+    </div>
+<br>
+<br>
+    <div class="row">
+    <div class="project">
+        <script>
+            function mult(){
+               var n=prompt("Enter Any Number");
+               var sum=0; 
+               document.getElementById("t1").innerHTML="";          
+               for (var a=1; a<=10; a++)           
+               {
+                   y=n*a;
+                  //alert(y);
+                  document.getElementById("t1").innerHTML+= n+"x"+a+"="+y+"<br>";
+                     
+               }
+               
+               
+            }
+        </script>
+        
+            
+            <h2>Multiplication Tables</h2>
+            <button id=b1 value="submit" onclick="mult()">Click Me</button>
+            <p id="t1"></p>
+        
+    </div>
+    </div>
+
+<br>
+<br>
+    <div class="row">
+    <div class="project">
+        
+            <H2>Generate Random Colors</H2> 
+            <p>click on the button to change the random background colors</p>
+            <button id="btn" onclick="colorgen()"> Change the Background color</button>
+            <script>
+                function colorgen(){
+                    var r=Math.floor(Math.random()*256);
+                   var g=Math.floor(Math.random()*256);
+                    var b=Math.floor(Math.random()*256);
+                    document.getElementById("color1").style.backgroundColor="rgb("+r+","+g+","+b+")";
+                 }
+                       </script>
+         
+         
+    </div>
+    </div>
+<br>
+<br>
+<div class="row">
+    <div class="project">
+        <script>
+            function sums(){
+               
+               var n=document.getElementById("num1").value;
+               var y=0;
+               document.getElementById("t3").innerHTML="The first "+n+" numbers are: ";
+                         
+               for (var a=1; a<=n; a++)           
+               {
+                 document.getElementById("t3").innerHTML+=a+" "; 
+                   y=a+y;
+                   //sum= sum+y; 
+               }
+               document.getElementById("t3").innerHTML+="<br>The sum of first "+n+" numbers: "+y  
+            }
+        </script>
+        <h2>Sums of numbers</h2>
+            <label for="num">Enter any Number:</label>
+            <input type="text" id="num1">
+            <button id=b1 value="submit" onclick="sums()">Click Me</button>
+            <p id="t3"></p>
+        
+        
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="project">
+        <script>
+            function rclock()
+            {
+                // alert('hi')
+                var date=new Date ();
+                var h=new Date().getHours();
+                var m=new Date().getMinutes();
+                var s=new Date().getSeconds();
+                var session="  AM";
+               if ( h > 12)
+                {h =h - 12;
+                session ="PM"}
+                if(h == 0){
+                    h = 12;
+                }
+                if (h > 12){
+                    h = h - 12;
+                    session = "  PM";
+                }
+                if (h<10)
+            {h='0'+h}
+            if (m<10)
+            {m='0'+m}
+            if (s<10)
+            {s='0'+s}
+                document.getElementById("clock").innerHTML=h+":"+m+":"+s + "" + session; 
+                ref();
+                
+            }
+            function ref()
+            {
+                var r=1000;
+                myt=setTimeout('rclock(),r');
+    
+            }
+        </script>
+        
+            <h1 style="color:cornflowerblue;">Realtime Clock on my Webpage</h1>
+            <p id="clock"></p>
+        
+    </div>
+</div>
+<br>
+<br>
+
+<div class="row">
+    <div class="project">
+        <script>
+            var canvas=document.getElementById("c1");
+            var b=canvas.getContext("2d");
+            //b.fillStyle="red";
+            //b.fillRect(10,10,100,75);
+            //b.moveTo(100,100);
+            //b.stroke();
+    
+            b.beginPath();
+            b.fillStyle="yellow";
+            b.arc(200,200,100,-3,2*Math.PI)
+            b.stroke();
+    
+            b.beginPath();
+            b.fillStyle="black";
+            b.arc(150,150,15,0,2*Math.PI)
+            b.stroke();
+    
+            b.beginPath();
+            
+            b.fillArc="black";
+            b.arc(250,150,15,0,2*Math.PI)
+            b.stroke();
+    
+           
+    
+            b.beginPath();
+            b.fillStyle="black";
+            b.arc(200,230,50,3,2*Math.PI,true)
+            b.stroke();
+    </script>
+
+    
+</body>
+</html>
+  
